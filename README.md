@@ -1,7 +1,8 @@
 TempMail.php
 ===========
 
-Generate random or custom temporary email address with available domains, and receive email messages.
+TempMail provides a disposable, temporary mailbox for receiving emails.
+Generate random or custom email address with available domains, and receive email messages.
 Uses temp-mail.org's API [https://temp-mail.org/en/api](https://temp-mail.org/en/api).
 
 
@@ -12,14 +13,14 @@ Just include ```dist/TempMail.php``` file and you're ready to go.
 
 ### Usage ###
 
-**Generate a new random email address**
+**Generate new random mailbox**
 
 ```php
 $tempMail = new TempMail();
 ```
 
 
-**Generate a new custom email address**
+**Generate custom/existing mailbox**
 
 ```php
 $tempMail = new TempMail('john.doe', '@leeching.net');
