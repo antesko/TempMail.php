@@ -70,3 +70,8 @@ $emails = $tempMail->getSources('raw');  // raw (default: json)
 ```php
 $del = $tempMail->deleteMessage('messageID');
 ```
+
+
+### NOTE ###
+
+temp-mail's API doesn't handle too much requests very well. So don't push it with more than 1 request every few seconds.
