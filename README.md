@@ -74,5 +74,5 @@ $del = $tempMail->deleteMessage('messageID');
 
 ### NOTES ###
 
-*temp-mail's API doesn't handle too much requests very well. So don't push it with more than 1 request every few seconds.
-*All incoming emails are removed within approximately 10 minutes after admission.
+* temp-mail's API doesn't handle too much requests very well. So don't push it with more than 1 request every few seconds.
+* All incoming emails are removed within approximately 10 minutes after admission.
