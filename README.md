@@ -12,16 +12,16 @@ Just include ```dist/TempMail.php``` file and you're ready to go.
 
 ### Usage ###
 
-**Generate new random email address**
+**Generate a new random email address**
 
-```
+```php
 $tempMail = new TempMail();
 ```
 
 
-**Generate new custom email address**
+**Generate a new custom email address**
 
-```
+```php
 $tempMail = new TempMail('john.doe', '@leeching.net');
 ```
 
@@ -30,7 +30,7 @@ $tempMail = new TempMail('john.doe', '@leeching.net');
 
 **Get list of available domains**
 
-```
+```php
 $domainsList = $tempMail::getDomains();
 ```
 
@@ -39,7 +39,7 @@ $domainsList = $tempMail::getDomains();
 
 **Available variables**
 
-```
+```php
 // Get email name
 echo $tempMail->name;
 
@@ -48,4 +48,24 @@ echo $tempMail->domain;
 
 // Get full email address
 echo $tempMail->address;
+```
+
+**Check and get a list of emails for a mailbox**
+
+```php
+$emails = $tempMail->getEmails();       // PHP array
+$emails = $tempMail->getEmails('raw');  // raw (default: json)
+```
+
+**Check and get a list of sources for a mailbox**
+
+```php
+$emails = $tempMail->getSources();       // PHP array
+$emails = $tempMail->getSources('raw');  // raw (default: json)
+```
+
+**Delete a message by it's ID**
+
+```php
+$del = $tempMail->deleteMessage('messageID');
 ```
